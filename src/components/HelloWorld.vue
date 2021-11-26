@@ -1,6 +1,6 @@
 <template>
   
-   <div >
+   <div class="container" >
      <p>{{nombre}}</p>
     <ul>
       <li v-for="item in clientes" :key="item.id">
@@ -27,7 +27,18 @@
     <button v-on:click='dividir' >Dividir</button>
     
     <h3>Resultado {{resultado}}</h3>
-    </div>
+
+<h1>EJERCICIO 2</h1>
+<input type ="text" v-model="tarea">
+<button v-on:click='agregarTarea' >Agregar Tarea</button>
+<h1>Listado Tareas</h1>
+<ul>
+  <li v-for="item in tareas" :key="item">
+    {{item}}
+
+  </li>
+</ul>
+</div>
 
 </template>
 
@@ -45,7 +56,9 @@ export default {
         url:"http://www.google.com",
         numero1:0,
         numero2:0,
-        resultado:0
+        resultado:0,
+        tarea:null,
+        tareas:['descripcion']
       }
     },
 methods :{
@@ -65,6 +78,9 @@ methods :{
         },
         dividir(){
           this.resultado=this.numero1/this.numero2;
+        },
+        agregarTarea(){
+          this.tareas.push(this.tarea);
         }
   }
 
