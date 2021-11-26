@@ -1,13 +1,32 @@
 <template>
   
    <div >
-     {{nombre}}
+     <p>{{nombre}}</p>
     <ul>
       <li v-for="item in clientes" :key="item.id">
               {{item.nombre}}
 
       </li>
     </ul>
+<br>
+
+  <input type="text" v-model="nombre"/>
+  
+  <p/>
+  <a v-bind:href="url">{{url}}</a><!-- o :hrefpara referncias estilos dinamicos-->
+  <p/>
+    <button v-on:click='metodo1' >Ejecutar Metodo</button><!-- o @click-->
+<p/>
+<h1>EJERCICIO 1</h1>
+    <input type="text" v-model="numero1"/>
+    <input type="text" v-model="numero2"/>
+    <p/>
+    <button v-on:click='sumar' >Sumar</button><!-- o @click-->
+    <button v-on:click='restar' >Restar</button>
+    <button v-on:click='multiplicar' >Multiplicar</button>
+    <button v-on:click='dividir' >Dividir</button>
+    
+    <h3>Resultado {{resultado}}</h3>
     </div>
 
 </template>
@@ -22,12 +41,30 @@ export default {
     return{
         nombre:'Alex',
         mostrar:true,
-        clientes:[{id:1,nombre:'Mirian'},{id:2,nombre:'Carmen'}]
+        clientes:[{id:1,nombre:'Mirian'},{id:2,nombre:'Carmen'}],
+        url:"http://www.google.com",
+        numero1:0,
+        numero2:0,
+        resultado:0
       }
     },
 methods :{
       metodo1(){
-        console.log('Ingresa a l metodo');
+        alert('Ingresa a l metodo');
+        },
+        sumar(){
+          this.resultado=this.numero1+this.numero2;
+        },
+
+         restar(){
+          this.resultado=this.numero1-this.numero2;
+        },
+
+         multiplicar(){
+          this.resultado=this.numero1*this.numero2;
+        },
+        dividir(){
+          this.resultado=this.numero1/this.numero2;
         }
   }
 
