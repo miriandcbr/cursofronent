@@ -1,22 +1,14 @@
 <template>
-  <div class="hello" v-if='true'>
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    
-    
+  
+   <div >
+     {{nombre}}
+    <ul>
+      <li v-for="item in clientes" :key="item.id">
+              {{item.nombre}}
 
-   <div>
-     <h1> titulo</h1>
-     <p>mi primer componente</p>
+      </li>
+    </ul>
     </div>
-
-
-  </div>
-
 
 </template>
 
@@ -28,11 +20,14 @@ export default {
   },
   data() {
     return{
-        nombre:'Alex'
+        nombre:'Alex',
+        mostrar:true,
+        clientes:[{id:1,nombre:'Mirian'},{id:2,nombre:'Carmen'}]
       }
     },
 methods :{
       metodo1(){
+        console.log('Ingresa a l metodo');
         }
   }
 
@@ -41,6 +36,10 @@ methods :{
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1{
+  color:blue;
+  font-weight: bold;
+}
 h3 {
   margin: 40px 0 0;
 }
@@ -54,5 +53,9 @@ li {
 }
 a {
   color: #42b983;
+}
+li{
+  color:#42b983;
+  font-size:34px
 }
 </style>
