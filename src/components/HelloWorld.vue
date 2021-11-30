@@ -1,44 +1,8 @@
 <template>
-  
-   <div class="container" >
-     <p>{{nombre}}</p>
-    <ul>
-      <li v-for="item in clientes" :key="item.id">
-              {{item.nombre}}
 
-      </li>
-    </ul>
-<br>
-
-  <input type="text" v-model="nombre"/>
-  
-  <p/>
-  <a v-bind:href="url">{{url}}</a><!-- o :hrefpara referncias estilos dinamicos-->
-  <p/>
-    <button v-on:click='metodo1' >Ejecutar Metodo</button><!-- o @click-->
-<p/>
-<h1>EJERCICIO 1</h1>
-    <input type="text" v-model="numero1"/>
-    <input type="text" v-model="numero2"/>
-    <p/>
-    <button v-on:click='sumar' >Sumar</button><!-- o @click-->
-    <button v-on:click='restar' >Restar</button>
-    <button v-on:click='multiplicar' >Multiplicar</button>
-    <button v-on:click='dividir' >Dividir</button>
-    
-    <h3>Resultado {{resultado}}</h3>
-
-<h1>EJERCICIO 2</h1>
-<input type ="text" v-model="tarea">
-<button v-on:click='agregarTarea' >Agregar Tarea</button>
-<h1>Listado Tareas</h1>
-<ul>
-  <li v-for="item in tareas" :key="item">
-    {{item}}
-
-  </li>
-</ul>
-</div>
+     <div>
+         <h1>Contenido</h1>
+   </div>
 
 </template>
 

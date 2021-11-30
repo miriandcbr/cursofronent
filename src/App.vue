@@ -1,28 +1,26 @@
 <template>
-  <div id="app">
-    
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <Navbar/>
+    <router-view class="espacio.contenido"/>
+<Footer/>
   </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import Footer from './components/Footer.vue'
+  import Navbar from './components/Navbar.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+ components :{
+   Navbar,Footer
+ }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.espacio.contenido{
+ padding-bottom: 20px; 
+ padding-top: 20px;
 }
 </style>
