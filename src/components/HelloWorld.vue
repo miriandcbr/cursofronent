@@ -1,7 +1,9 @@
 <template>
 
      <div>
-         <h1>Contenido</h1>
+         <h1>Aplicacion curso Web </h1>
+         Aplicacion de Back end usuando Spring Boot y para 
+          el  Front end  se ua VUE <p/>
    </div>
 
 </template>
@@ -54,7 +56,7 @@ methods :{
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1{
-  color:blue;
+  color:cadetblue;
   font-weight: bold;
 }
 h3 {
